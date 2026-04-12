@@ -99,6 +99,7 @@ jobs:
           env-file: True
           test: True
           requirements: "requirements_wheels_test.txt"
+          wheels-index: ${{ vars.WHEELS_INDEX }}
 
   test_local_repo:
     name: Test publishing to a local repository
