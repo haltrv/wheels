@@ -66,9 +66,10 @@ jobs:
           platforms: ${{ matrix.platform }}
           cache-from: type=registry,ref=${{ steps.info.outputs.name }}:dev
           build-args: |
-            BUILD_FROM=ghcr.io/home-assistant/${{ matrix.arch }}-base-python:${{ matrix.base }}
+            BUILD_FROM=ghcr.io/haltrv/${{ matrix.arch }}-base-python:${{ matrix.base }}
             BUILD_ARCH=${{ matrix.arch }}
             CPYTHON_ABI=${{ matrix.abi }}
+            PIP_EXTRA_INDEX_URL=${{ vars.EXTRA_INDEX_URL }}
           tags: |
             ${{ steps.info.outputs.name }}:${{ steps.info.outputs.version }}
             ${{ steps.info.outputs.name }}:${{ github.sha }}
