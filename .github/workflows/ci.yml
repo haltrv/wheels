@@ -69,7 +69,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        abi: ["cp314"]
+        abi: ["cp315"]
         tag: ["musllinux_1_2"]
         arch: ["aarch64", "amd64"]
         include:
@@ -119,7 +119,7 @@ jobs:
       - name: Build wheels
         uses: ./
         with:
-          abi: cp314
+          abi: cp315
           tag: musllinux_1_2
           arch: amd64
           apk: "mariadb-dev;postgresql-dev;libffi-dev;openssl-dev"

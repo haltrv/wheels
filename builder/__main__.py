@@ -265,7 +265,7 @@ def builder(  # noqa: C901, PLR0913, PLR0912, PLR0915
             )
 
         if not test:
-            run_upload(upload, output, remote)
+            run_upload(upload, output, remote, index, wheels_index)
 
     sys.exit(exit_code)
 
