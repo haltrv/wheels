@@ -265,6 +265,8 @@ def builder(  # noqa: C901, PLR0913, PLR0912, PLR0915
             )
 
         if not test:
+            from builder.utils import run_command
+            run_command(f"index-503 --merge-with {wheels_index} {output}/musllinux")
             run_upload(upload, output, remote)
 
     sys.exit(exit_code)
