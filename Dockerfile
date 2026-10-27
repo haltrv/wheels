@@ -31,6 +31,7 @@ RUN \
     && pip3 install \
         -r /usr/src/builder/requirements.txt \
         -r /usr/src/builder/requirements_${CPYTHON_ABI}.txt \
+        git+https://github.com/eshattow/bdraco-index-503@main \
         /usr/src/builder/
 
 # Set build environment information
