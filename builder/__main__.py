@@ -265,7 +265,17 @@ def builder(  # noqa: C901, PLR0913, PLR0912, PLR0915
             )
 
         if not test:
-            run_upload(upload, output, remote)
+            run_upload(upload, output, remote, index, wheels_index)
+            lock_held = run_command(
+                f"rsync --dry-run {remote}/.musllinux.index_503.lock"
+            )
+            print( f"lock_held={lock_held}" )
+            # run_command(
+            #     f"index-503 --merge-with {wheels_index} {local}/musllinux"
+            # )
+            # run_command(
+            #     f"rsync --human-readable --recursive --links --progress --checksum {local}/* {remote}/",
+            # )
 
     sys.exit(exit_code)
 
