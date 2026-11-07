@@ -14,14 +14,14 @@ Compile utilities:
 - automake
 - cargo
 
-### Python 3.14 / musllinux_1_2
+### Python 3.15 / musllinux_1_2
 
 Build with Alpine 3.24
-Images: ghcr.io/home-assistant/wheels/ARCH/musllinux_1_2/cp314:VERSION
+Images: ghcr.io/home-assistant/wheels/ARCH/musllinux_1_2/cp315:VERSION
 
 Version of system builds can be found by checking:
 
-- [requirements_cp314.txt](requirements_cp314.txt)
+- [requirements_cp315.txt](requirements_cp315.txt)
 - https://pkgs.alpinelinux.org/packages?branch=v3.24
 
 ## Misc
